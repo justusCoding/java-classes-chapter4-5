@@ -11,7 +11,6 @@ public class Menu {
         this.lastUpdated = d;
         this.items = i;
     }
-
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }

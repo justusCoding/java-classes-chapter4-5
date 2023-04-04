@@ -35,7 +35,6 @@ public class MenuItem {
         this.category = category;
     }
 
-
     public void setNew(boolean aNew) {
         isNew = aNew;
     }
