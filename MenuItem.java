@@ -1,5 +1,7 @@
 package Resturant;
 
+import java.util.Objects;
+
 public class MenuItem {
 
     private double price;
@@ -21,6 +23,9 @@ public class MenuItem {
         this.isNew = iN;
     }
 
+    public double getPrice() {
+        return price;
+    }
 
     public void setPrice(double price) {
         this.price = price;
@@ -35,10 +40,48 @@ public class MenuItem {
         this.category = category;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public void setNew(boolean aNew) {
         isNew = aNew;
     }
 
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void isItNew(){
+        if(this.isNew){
+            System.out.println("the item is new");
+        }else {
+            System.out.println("this item is not new");
+        }
+    }
+
+
+
+    public boolean equals(MenuItem comparison) {
+        if (comparison == this) {
+            return true;
+        }
+
+        if (comparison == null) {
+            return false;
+        }
+
+        if (comparison.getClass() != getClass()) {
+            return false;
+        }
+
+        MenuItem theItem = (MenuItem) comparison;
+        return theItem.getDescription() == getDescription();
+    }
 
 
 }
